@@ -1175,3 +1175,205 @@ footer {
   background: var(--gold);
   color: var(--bg);
 }
+
+/* ASSIGNMENT RUBRIC UPDATES */
+.nav-links {
+  gap: 1.15rem;
+}
+
+.nav-links a {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+#experience,
+#volunteering {
+  background: var(--bg);
+}
+
+#education {
+  background: var(--bg2);
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.timeline-card,
+.education-card {
+  border: 1px solid var(--border2);
+  background: var(--bg2);
+  padding: 2rem;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  transition: all 0.3s;
+}
+
+#education .education-card,
+#volunteering .timeline-card {
+  background: var(--bg3);
+}
+
+.timeline-card:hover,
+.education-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.timeline-date {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border);
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.timeline-card h3,
+.education-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.timeline-place {
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.detail-list {
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.detail-list li {
+  color: var(--cream2);
+  line-height: 1.65;
+  font-size: 0.92rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.detail-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+}
+
+.detail-list strong,
+.project-details strong,
+.education-meta strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.education-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.education-icon {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.education-meta {
+  display: grid;
+  gap: 0.65rem;
+  color: var(--cream2);
+  line-height: 1.6;
+}
+
+.major-project {
+  grid-column: span 2;
+  border-color: var(--border);
+  background: linear-gradient(135deg, rgba(200, 169, 110, 0.08), var(--bg3));
+}
+
+.project-details {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1.25rem 0 1.4rem;
+  padding: 1rem;
+  border: 1px solid var(--border2);
+  background: rgba(200, 169, 110, 0.04);
+}
+
+.project-details p {
+  color: var(--cream2);
+  line-height: 1.55;
+  font-size: 0.86rem;
+}
+
+.compact-details {
+  padding: 0.8rem;
+}
+
+.compact-details p {
+  font-size: 0.8rem;
+}
+
+.volunteer-card {
+  max-width: 900px;
+}
+
+body.light-mode .major-project {
+  background: linear-gradient(135deg, rgba(152, 99, 75, 0.08), var(--bg3));
+}
+
+@media(max-width:1200px) {
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+  }
+}
+
+@media(max-width:1024px) {
+  .timeline-grid,
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .major-project {
+    grid-column: span 1;
+  }
+}
+
+@media(max-width:640px) {
+  .education-card {
+    flex-direction: column;
+  }
+
+  .certs-grid,
+  .certs-grid-wide {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media(max-width:1024px) {
+  .certs-grid-wide {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
